@@ -97,8 +97,9 @@
       80%       { transform: rotate(2.5deg); }
     }
     .cat-hero:hover, .cat-hero.tapped  { animation: wiggle 0.2s ease-in-out infinite !important; cursor: pointer; }
-    .cat-contact { transition: transform 0.3s ease; }
-    .cat-contact:hover, .cat-contact.tapped { transform: scale(1.07); cursor: pointer; }
+    .cat-contact { cursor: pointer; }
+    .cat-contact img { transition: transform 0.3s ease; }
+    .cat-contact:hover img, .cat-contact.tapped img { transform: scale(1.07); }
     .cat-contact:hover .nya, .cat-contact.tapped .nya { opacity: 1; transform: scale(1) translateY(0); }
     .nya {
       opacity: 0;
