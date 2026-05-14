@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>まなびやさかさま | スクール・コミュニティ</title>
+  <meta name="description" content="地域の子供たち・学生・クリエイター・個人事業主が集うコミュニティ「まなびやさかさま」。デザイン・SNS・Webマーケティングを一緒に学び、つながる場所。完全無料。岐阜県西濃地域。" />
+  <link rel="canonical" href="https://school.sakasaew.com/" />
+
+  <!-- 準備中のあいだは検索エンジンに登録しない。公開時はこの行を削除 -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- OGP -->
+  <meta property="og:title"       content="まなびやさかさま | スクール・コミュニティ" />
+  <meta property="og:description" content="地域の子供たち・学生・クリエイター・個人事業主が集うコミュニティ。デザイン・SNS・Webマーケを一緒に学ぶ、さかさまな場所。完全無料。" />
+  <meta property="og:image"       content="https://school.sakasaew.com/images/GoroReli.png" />
+  <meta property="og:url"         content="https://school.sakasaew.com/" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="まなびやさかさま" />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="まなびやさかさま | スクール・コミュニティ" />
+  <meta name="twitter:description" content="地域の子供たち・学生・クリエイター・個人事業主が集うコミュニティ。完全無料。" />
+  <meta name="twitter:image"       content="https://school.sakasaew.com/images/GoroReli.png" />
+
+  <!-- ブラウザのテーマカラー -->
+  <meta name="theme-color" content="#2d9faa" />
+
+  <!-- favicon -->
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "まなびやさかさま",
+    "url": "https://school.sakasaew.com/",
+    "description": "地域の子供たち・学生・クリエイター・個人事業主が集うコミュニティ。デザイン・SNS・Webマーケティングを一緒に学ぶ、さかさまな場所。",
+    "areaServed": {
+      "@type": "Place",
+      "name": "岐阜県西濃地域"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY",
+      "description": "参加費・入会費・月謝いっさい無償"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "さかさま",
+      "url": "https://www.sakasaew.com/"
+    },
+    "sameAs": [
+      "https://www.instagram.com/sakasaew/"
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-teal:         #2d9faa;
+      --color-teal-dark:    #1d7a84;
+      --color-teal-light:   #e6f6f8;
+      --color-purple:       #be5fd6;
+      --color-purple-dark:  #9040b0;
+      --color-purple-light: #f7eafb;
+      --color-navy:         #2c2f62;
+      --color-muted:        #6b7280;
+      --font-sans:          "Poppins", "Zen Kaku Gothic New", sans-serif;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+    .float { animation: float 5s ease-in-out infinite; }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  </noscript>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- ======================================================
+       NAV
+       ====================================================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <nav class="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
+
+      <a href="#" class="flex items-center gap-2">
+        <img src="images/VI_logo-04-2.svg" alt="まなびやさかさま" class="h-6 w-auto" />
+        <span class="text-sm font-bold tracking-wide text-navy">まなびやさかさま</span>
+        <span class="text-xs text-muted">準備中です。</span>
+      </a>
+
+      <!-- PC nav -->
+      <ul class="hidden md:flex items-center gap-8 text-xs font-medium tracking-wide text-muted">
+        <li><a href="#about"     class="hover:text-teal transition-colors">まなびやさかさまとは</a></li>
+        <li><a href="#for-who"   class="hover:text-teal transition-colors">どんな人が対象？</a></li>
+        <li><a href="#what"      class="hover:text-teal transition-colors">なにを学べる？</a></li>
+        <li><a href="#community" class="hover:text-teal transition-colors">そのほか</a></li>
+        <li>
+          <a href="#contact"
+             class="px-4 py-2 rounded-full bg-navy text-white text-xs font-bold hover:opacity-80 transition-opacity">
+            お問い合わせ
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile pill menu button -->
+      <button id="menu-btn" class="md:hidden px-4 py-1.5 rounded-full border border-gray-300 text-gray-700 text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="メニューを開く">
+        <span id="menu-label">メニュー</span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <ul class="max-w-5xl mx-auto px-5 py-5 flex flex-col gap-4 text-sm font-medium">
+        <li><a href="#about"     class="block py-1 text-muted" onclick="closeMobileMenu()">まなびやさかさまとは</a></li>
+        <li><a href="#for-who"   class="block py-1 text-muted" onclick="closeMobileMenu()">どんな人が対象？</a></li>
+        <li><a href="#what"      class="block py-1 text-muted" onclick="closeMobileMenu()">なにを学べる？</a></li>
+        <li><a href="#community" class="block py-1 text-muted" onclick="closeMobileMenu()">そのほか</a></li>
+        <li>
+          <a href="#contact"
+             class="block py-3 text-center rounded-full bg-navy text-white font-bold"
+             onclick="closeMobileMenu()">お問い合わせ</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+    <section id="hero" class="pt-14 min-h-[50svh] flex flex-col justify-center relative overflow-hidden
+                               bg-gradient-to-br from-navy via-teal-dark to-teal">
+
+      <!-- 背景装飾 -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-purple/15 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-teal/20 blur-3xl"></div>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto w-full px-5 py-14 md:py-16
+                  flex flex-col items-start text-left gap-6
+                  md:flex-row md:items-center md:gap-12">
+
+        <!-- PC用テキスト左カラム（バッジ・h1・サブ・ボタン全部） -->
+        <div class="hidden md:flex flex-col items-start gap-5 text-white flex-1">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/30 text-xs text-white/90 tracking-wide">
+            <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-pulse"></span>
+            現在、準備中です。
+          </span>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            働くって、<br />なんだろう。
+          </h1>
+          <p class="text-base text-white/75 leading-relaxed">
+            日々の暮らしをゆたかに。<br />
+            デザイナーな本屋さんと一緒に、学びませんか。
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#what"
+               class="inline-flex justify-center items-center whitespace-nowrap px-7 py-4 rounded-full bg-white text-navy font-bold text-sm
+                      hover:opacity-90 transition-opacity shadow-lg">
+              なにを学べる？ →
+            </a>
+            <a href="#contact"
+               class="inline-flex justify-center items-center whitespace-nowrap px-7 py-4 rounded-full border border-white/40 text-white text-sm font-medium
+                      hover:bg-white/10 transition-colors">
+              お問い合わせ
+            </a>
+          </div>
+        </div>
+
+        <!-- モバイル用：バッジ + h1 -->
+        <div class="md:hidden flex flex-col items-start gap-4 text-white w-full">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/30 text-xs text-white/90 tracking-wide">
+            <span class="w-1.5 h-1.5 rounded-full bg-white/70 animate-pulse"></span>
+            現在、準備中です。
+          </span>
+          <h1 class="text-4xl font-bold leading-tight">
+            働くって、<br />なんだろう。
+          </h1>
+        </div>
+
+        <!-- ごろりり -->
+        <div class="w-full md:w-[640px] shrink-0 float">
+          <img src="images/GoroReli.png"
+               alt="ごろりり"
+               class="w-full h-auto drop-shadow-2xl" />
+        </div>
+
+        <!-- モバイル用：サブテキスト + ボタン（画像の下） -->
+        <div class="md:hidden flex flex-col items-start gap-4 text-white w-full">
+          <p class="text-base text-white/75 leading-relaxed">
+            日々の暮らしをゆたかに。<br />
+            デザイナーな本屋さんと一緒に、学びませんか。
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#what"
+               class="inline-flex justify-center items-center whitespace-nowrap px-7 py-4 rounded-full bg-white text-navy font-bold text-sm
+                      hover:opacity-90 transition-opacity shadow-lg">
+              なにを学べる？ →
+            </a>
+            <a href="#contact"
+               class="inline-flex justify-center items-center whitespace-nowrap px-7 py-4 rounded-full border border-white/40 text-white text-sm font-medium
+                      hover:bg-white/10 transition-colors">
+              お問い合わせ
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         ABOUT
+         ====================================================== -->
+    <section id="about" class="py-20 px-5 bg-teal-light">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal flex flex-col gap-8">
+
+          <div class="flex flex-col gap-2">
+            <span class="text-xs tracking-[0.3rem] text-teal font-medium">首謀者の脳内、理念的なもの</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-navy">
+              まなびやさかさまって、なに？
+            </h2>
+          </div>
+
+          <div class="flex flex-col gap-5 text-base text-gray-700 leading-relaxed">
+            <p>
+              自立とは？経済的に、精神的に、わたしは大人？それとも子ども？<br />
+              学校に行かなきゃいけないのはなんで？行かなかったらどうなるの？<br />
+              なんのために行くの？とりあえず受験？その先は？<br />
+              食い扶持になりえない仕事ってなに？堅実な仕事とは？資格は必要？<br />
+              家賃はいくら？食費は？適切って、適宜ってなに？
+            </p>
+            <p>
+              生きていく過程で持つ疑問は、この宇宙に収まりきらないんじゃないかなんて思っている子どもでした。超新星大爆発。答えられる大人は居ないのだろうか。答えられなくてもいい、一緒に考えてくれないか。わたしはこれらに対応できる大人になりたかった。人生の壁打ち担当。
+            </p>
+            <p>
+              自律的な生きざま。他律的ではいけないの？ジャパニーズ。あかんことはない。
+            </p>
+            <p>
+              わたしとあなた。デジタルとアナログ。田舎と都会。女と男。陰と陽。<br />
+              二元論では片付かない、なにかがあるはずだ。
+            </p>
+            <p>
+              さかさまな視点のデザイナーは、ただいまフリースクールプロジェクトを準備中です。
+            </p>
+            <p>
+              あなたの視点をつくるお手伝いがしたい。
+            </p>
+            <p class="text-sm text-muted">
+              なんだかいろいろ宣っておりますが、わたしの脳内を書き記しておきます。いずれ本格始動したら（ぜったいするので！）それぞれまとめてまいりまする。
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-teal/20">
+              <div class="text-2xl mb-2">🌱</div>
+              <div class="font-bold text-sm text-navy mb-1">地域密着</div>
+              <div class="text-xs text-muted leading-relaxed">岐阜県神戸町を拠点に（予定）</div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-purple/20">
+              <div class="text-2xl mb-2">💸</div>
+              <div class="font-bold text-sm text-navy mb-1">完全無料</div>
+              <div class="text-xs text-muted leading-relaxed">この星をどうぞよろしく</div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-teal/20 col-span-2 sm:col-span-1">
+              <div class="text-2xl mb-2">🤝</div>
+              <div class="font-bold text-sm text-navy mb-1">少人数制</div>
+              <div class="text-xs text-muted leading-relaxed">1〜3名、1対1が中心</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         FOR WHO
+         ====================================================== -->
+    <section id="for-who" class="py-20 px-5 bg-white">
+      <div class="max-w-4xl mx-auto flex flex-col gap-8">
+
+        <div class="reveal flex flex-col gap-2">
+          <span class="text-xs tracking-[0.3rem] text-teal font-medium">事業概要</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy">どんな人が対象？</h2>
+        </div>
+
+        <div class="reveal flex flex-col gap-5 text-gray-700 leading-relaxed">
+          <p>
+            小学生〜大人の副業まで、PCやスマートフォンが使える人が対象。
+          </p>
+          <p>
+            デジタルツールもデザインも、本当はとっても身近なもの。まずは無料のツールから触れてみることで、適性を見極めていきます。やはり向き不向きってのがあるんですよね。
+          </p>
+          <p>
+            小学生向けのカリキュラムは1-2時間ほどの遊んで学べるワークショップを予定しています。
+          </p>
+          <p>
+            高校生以降の方を対象に、クリエイティブ業界で働くってどんな感じ？リモートワークって？フリーランスは稼げるの？というような、漠然とした質問にもお答えしつつ、現役のデザイナーがメンター・コーチとなり、完全オーダーメイドのロードマップを作って学習できるよう準備しています。
+          </p>
+          <p class="text-muted text-sm">
+            中の人、Webデザインスクールで講師もやってまいりましたが、受講者のWebリテラシーの低さが気になってしまいました。食われないで。強くなって。曇りなき眼で見定めて決めてやっておくれよ。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WHAT WE DO
+         ====================================================== -->
+    <section id="what" class="py-20 px-5 bg-gray-50">
+      <div class="max-w-4xl mx-auto flex flex-col gap-10">
+
+        <div class="reveal flex flex-col gap-2">
+          <span class="text-xs tracking-[0.3rem] text-teal font-medium">カリキュラム・取り組み例</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy">なにを学べる？</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="reveal bg-white rounded-2xl p-6 flex flex-col gap-2 shadow-sm border border-gray-100">
+            <p class="text-xs text-teal font-medium">SNSで使う画像を無料で簡単に作る方法が知りたい</p>
+            <p class="font-bold text-navy">バナーなどのクリエイティブ制作</p>
+            <p class="text-sm text-muted leading-relaxed">デザイナーの視点で解説します。</p>
+          </div>
+
+          <div class="reveal bg-white rounded-2xl p-6 flex flex-col gap-2 shadow-sm border border-gray-100">
+            <p class="text-xs text-teal font-medium">せっかくなので、デザインのことも知りたい</p>
+            <p class="font-bold text-navy">Webや紙媒体のデザイン制作</p>
+            <p class="text-sm text-muted leading-relaxed">デザインを分解すると様々な要素が。色やレイアウト、それぞれの役割について、オタクは一生話せてしまいます。</p>
+          </div>
+
+          <div class="reveal bg-white rounded-2xl p-6 flex flex-col gap-2 shadow-sm border border-gray-100">
+            <p class="text-xs text-teal font-medium">自分のことや家族の仕事を宣伝したい</p>
+            <p class="font-bold text-navy">Webマーケティング／販促活動</p>
+            <p class="text-sm text-muted leading-relaxed">人によって持ち物や向かう先は違います。あなただけの道がそこにはあるはず。</p>
+          </div>
+
+          <div class="reveal bg-white rounded-2xl p-6 flex flex-col gap-2 shadow-sm border border-gray-100">
+            <p class="text-xs text-teal font-medium">どんなツールで作るのがいい？</p>
+            <p class="font-bold text-navy">予算や用途、スキルに応じて適したツールを提案</p>
+            <p class="text-sm text-muted leading-relaxed">情報や手段がありすぎる現代、選び方がむずかしい。無作為にやってみるのもよいかもしれないけど、膨大な時間と体力が要る。昭和スタイルでは。よかったら、今この瞬間デザインを生業にしている人の選択を参考にしてみてください。</p>
+          </div>
+
+          <div class="reveal bg-white rounded-2xl p-6 flex flex-col gap-2 shadow-sm border border-gray-100">
+            <p class="text-xs text-purple font-medium">目的がない</p>
+            <p class="font-bold text-navy">好きなものについてお話しする会、開催</p>
+            <p class="text-sm text-muted leading-relaxed">生きていくのに目的なんてなくたっていい。好きなものを買うため、お金を稼ぐことが目標でもいいんじゃないかな。いちばん最初のわたしはそうでした。</p>
+          </div>
+
+          <div class="reveal bg-white rounded-2xl p-6 flex flex-col gap-2 shadow-sm border border-gray-100">
+            <p class="text-xs text-teal font-medium">パソコンを使って働きたい</p>
+            <p class="font-bold text-navy">ネットサーフィンのその先へ</p>
+            <p class="text-sm text-muted leading-relaxed">デジタルツールを使って、自律的に生きる方法はたっくさんあります。オフィスで使うアプリケーションはもちろん、デザインやライティング、クリエイティブな表現方法、AIもあるし、有象無象…選択が難しい。お子さんやお孫さんには相談しづらいこともあるかもしれません。お気軽にお声がけください。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         そのほか
+         ====================================================== -->
+    <section id="community" class="py-20 px-5 bg-teal-light">
+      <div class="max-w-4xl mx-auto flex flex-col gap-10">
+
+        <div class="reveal flex flex-col gap-2">
+          <span class="text-xs tracking-[0.3rem] text-teal font-medium">そのほか</span>
+        </div>
+
+        <div class="flex flex-col gap-6">
+
+          <div class="reveal flex flex-col gap-3">
+            <h3 class="text-xl md:text-2xl font-bold text-navy">どこでやってるの？</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              現在は不定期開催かつ、場所も決まっていません。（いずれは岐阜県は安八郡、神戸町にてスペースを設ける予定です。一緒に本屋さんやります。）
+            </p>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              おうちが落ち着く方には家庭教師スタイルで、おそとがよい方は電源が確保できる場所を見つけましょう。現在は西濃っこのみなさんと探り探り活動中。
+            </p>
+          </div>
+
+          <div class="w-full h-px bg-navy/10"></div>
+
+          <div class="reveal flex flex-col gap-1.5">
+            <h3 class="text-xl md:text-2xl font-bold text-navy">ひとりでも大丈夫？</h3>
+            <p class="text-sm text-gray-600 leading-normal">
+              基本的には3名以下くらいの少人数制で、1名開催1on1が中心です。
+            </p>
+            <p class="text-sm text-gray-600 leading-normal">
+              教える人もですね、たくさんの人は苦手です。あとやっぱり、学ぶには集中が必要。
+            </p>
+            <p class="text-sm text-gray-600 leading-normal">
+              親御さんがいたほうが安心という場合は一緒に参加いただくことも可能です。
+            </p>
+          </div>
+
+          <div class="w-full h-px bg-navy/10"></div>
+
+          <div class="reveal flex flex-col gap-1.5">
+            <h3 class="text-xl md:text-2xl font-bold text-navy">お金はかかるの？</h3>
+            <p class="text-sm text-gray-600 leading-normal">
+              無償です。日本を、この星をどうぞよろしく。お金を頂くことは想定しておりません。
+            </p>
+            <p class="text-sm text-gray-600 leading-normal">
+              ただ、その分中の人の主たる業務を優先することがあると思うので、日程や進め方は相談させてください。
+            </p>
+          </div>
+
+        </div>
+
+        <!-- ¥0 カード -->
+        <div class="reveal self-start bg-white rounded-3xl px-10 py-8 text-center">
+          <div class="text-5xl font-bold text-teal mb-2">¥0</div>
+          <div class="text-sm font-bold text-navy">完全無料</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CONTACT
+         ====================================================== -->
+    <section id="contact" class="py-20 px-5 bg-white">
+      <div class="max-w-4xl mx-auto flex flex-col gap-8">
+
+        <div class="reveal flex flex-col gap-3">
+          <span class="text-xs tracking-[0.3rem] text-navy font-medium">お問い合わせ</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-navy">気になることなど、なんなりと</h2>
+          <p class="text-muted leading-normal">お気軽にお声がけください。</p>
+          <p class="text-muted text-sm leading-normal">さかさまのお問い合わせページに遷移します。</p>
+        </div>
+
+        <div class="reveal">
+          <a href="https://www.sakasaew.com/contact.html" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-navy text-white font-bold text-sm
+                    hover:opacity-80 transition-opacity shadow-md">
+            お問い合わせページへ →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="py-10 px-5 bg-[#2d5f6e] text-white/70">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <div class="flex flex-col gap-1 text-center md:text-left">
+        <span class="font-bold text-white text-sm">まなびやさかさま</span>
+        <span>岐阜県西濃地域 ／ オンライン全国対応</span>
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-1">
+        <div class="flex items-center gap-4">
+          <a href="https://www.yamamurabook.shop/"           target="_blank" rel="noopener" class="hover:text-white transition-colors">山村書店</a>
+          <a href="https://www.sakasaew.com/"               target="_blank" rel="noopener" class="hover:text-white transition-colors">さかさま</a>
+          <a href="https://www.instagram.com/sakasaew/"     target="_blank" rel="noopener" class="hover:text-white transition-colors">@sakasaew</a>
+        </div>
+        <span>&copy; <span id="year"></span> まなびやさかさま</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ピルメニューボタン */
+    const btn       = document.getElementById('menu-btn');
+    const menu      = document.getElementById('mobile-menu');
+    const menuLabel = document.getElementById('menu-label');
+    let isOpen = false;
+
+    btn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      menu.classList.toggle('hidden', !isOpen);
+      menuLabel.textContent = isOpen ? '閉じる' : 'メニュー';
+    });
+
+    function closeMobileMenu() {
+      isOpen = false;
+      menu.classList.add('hidden');
+      menuLabel.textContent = 'メニュー';
+    }
+
+    /* スクロールアニメーション */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* Formspree AJAX送信 */
+    const form    = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    const error   = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = '送信中…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          success.classList.remove('hidden');
+          error.classList.add('hidden');
+          form.reset();
+        } else {
+          throw new Error();
+        }
+      } catch {
+        error.classList.remove('hidden');
+        success.classList.add('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '送信する';
+      }
+    });
+  </script>
+
+</body>
+</html>
