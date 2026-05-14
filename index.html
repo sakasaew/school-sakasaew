@@ -91,12 +91,12 @@
     .float { animation: float 5s ease-in-out infinite; }
     @keyframes wiggle {
       0%, 100% { transform: rotate(0deg); }
-      20%       { transform: rotate(-6deg); }
-      40%       { transform: rotate(6deg); }
-      60%       { transform: rotate(-6deg); }
-      80%       { transform: rotate(6deg); }
+      20%       { transform: rotate(-2.5deg); }
+      40%       { transform: rotate(2.5deg); }
+      60%       { transform: rotate(-2.5deg); }
+      80%       { transform: rotate(2.5deg); }
     }
-    .cat-hero:hover, .cat-hero.tapped  { animation: wiggle 0.4s ease-in-out infinite !important; cursor: pointer; }
+    .cat-hero:hover, .cat-hero.tapped  { animation: wiggle 0.2s ease-in-out infinite !important; cursor: pointer; }
     .cat-contact { transition: transform 0.3s ease; }
     .cat-contact:hover, .cat-contact.tapped { transform: scale(1.07); cursor: pointer; }
     .cat-contact:hover .nya, .cat-contact.tapped .nya { opacity: 1; transform: scale(1) translateY(0); }
@@ -484,7 +484,7 @@
         <!-- ごろるる -->
         <div class="relative w-80 md:w-[28rem] shrink-0 float self-end md:self-center md:ml-auto cat-contact">
           <!-- にゃ吹き出し -->
-          <div class="nya absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-navy font-bold text-sm px-4 py-1.5 rounded-full shadow-md border border-gray-100 whitespace-nowrap">
+          <div class="nya absolute bottom-16 right-6 bg-white text-navy font-bold text-sm px-4 py-1.5 rounded-full shadow-md border border-gray-100 whitespace-nowrap">
             にゃ
           </div>
           <img src="images/GoroRulu.png" alt="ごろるる" class="w-full h-auto drop-shadow-xl" />
