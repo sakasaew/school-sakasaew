@@ -96,10 +96,10 @@
       60%       { transform: rotate(-6deg); }
       80%       { transform: rotate(6deg); }
     }
-    .cat-hero:hover  { animation: wiggle 0.4s ease-in-out infinite !important; cursor: pointer; }
+    .cat-hero:hover, .cat-hero.tapped  { animation: wiggle 0.4s ease-in-out infinite !important; cursor: pointer; }
     .cat-contact { transition: transform 0.3s ease; }
-    .cat-contact:hover { transform: scale(1.07); cursor: pointer; }
-    .cat-contact:hover .nya { opacity: 1; transform: scale(1) translateY(0); }
+    .cat-contact:hover, .cat-contact.tapped { transform: scale(1.07); cursor: pointer; }
+    .cat-contact:hover .nya, .cat-contact.tapped .nya { opacity: 1; transform: scale(1) translateY(0); }
     .nya {
       opacity: 0;
       transform: scale(0.7) translateY(6px);
@@ -535,6 +535,12 @@
       menu.classList.add('hidden');
       menuLabel.textContent = 'メニュー';
     }
+
+    /* 猫タップインタラクション（モバイル） */
+    document.querySelectorAll('.cat-hero, .cat-contact').forEach(el => {
+      el.addEventListener('touchstart', () => el.classList.add('tapped'), { passive: true });
+      el.addEventListener('touchend', () => setTimeout(() => el.classList.remove('tapped'), 600));
+    });
 
     /* スクロールアニメーション */
     const observer = new IntersectionObserver((entries) => {
